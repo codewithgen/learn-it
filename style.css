@@ -49,8 +49,10 @@ button {
   --dark-blue: hsla(234, 53%, 16%, 1);
   --raisin: hsla(300, 4%, 14%, 1);
   --orange: hsla(37, 98%, 53%, 1);
-  --light-pink: hsla(341, 100%, 83%, 1);
+  --light-pink: rgb(255, 210, 168);
   --purple: hsla(261, 75%, 58%, 1);
+  --blue-light: #819cd6;
+
  
   /* neutral */
   --gray: hsla(233, 10%, 56%, 1);
@@ -84,7 +86,7 @@ button {
 
 .body-m {
   font: 500 1.125rem/1.75rem var(--ff), sans-serif;
-  color: var(--gray);
+  color: var(--white);
 }
 
 .body-s {
@@ -94,9 +96,11 @@ button {
 
 .link {
   font: 700 1.125rem/1.75rem var(--ff), sans-serif;
-  color:
-    var(--orange);
+  color: var(--blue-light);
   text-shadow: 0 0 1px var(--gray);
+  background-color: var(--white);
+  padding: 0 1rem;
+  border-radius: 12px;
 }
 
 .margin-top-card-50 {
@@ -113,6 +117,7 @@ button {
 
 .padding-bottom-50 {
   padding-bottom: 3.125rem;
+  color: var(--blue-light);
 }
 
 /* -----  buttons */
@@ -246,13 +251,14 @@ header {
   gap: 1.875rem;
   row-gap: 3.75rem;
   padding-bottom: 8.75rem;
+  color: var(--white);
 }
 
 .card,
 .card-hover {
   position: relative;
   border-radius: 0.9375rem;
-  background-color: var(--white);
+  background: linear-gradient(180deg, #14213D 0%, #FCA311 100%);
   padding: 2rem 2.375rem;
   box-shadow: 0rem 1.5625rem 3.125rem rgba(6, 22, 141, 0.0442381);
   transition: ease-in-out 0.3s;
@@ -270,6 +276,7 @@ header {
 
 .card .heading-s {
   padding-top: 2rem;
+  color: var(--white);
 }
 
 .card-hover .heading-m {
@@ -279,7 +286,7 @@ header {
 /* footer */
 
 footer {
-  background-color: var(--dark-blue);
+  background-color: var(--blue-light);
 }
 
 .footer-wrapper {
@@ -305,11 +312,13 @@ footer {
   .card img:hover {
     transform: rotate(360deg);
     transition: ease-in-out 0.5s;
+
+
   }
 
   /* card icon affects card text */
   .card img:hover~h3 {
-    background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+    background: linear-gradient(180deg, #14213dae 0%, #fca21189 100%);
     -webkit-background-clip: text;
     /* -webkit-text-fill-color: transparent; */
     background-clip: text;
@@ -319,7 +328,6 @@ footer {
 
   .card img:hover~a,
   .card h3:hover {
-    color: var(--orange);
     transition: ease-in-out 0.5s;
   }
 
@@ -343,15 +351,18 @@ footer {
 
   .card-hover:hover {
     transition: all ease-in-out 0.5s;
+
     background-repeat: no-repeat;
     background-position: right;
-    background-size: cover;
-    background-image: url(./assets/card-photo.png);
+    background-size:contain;
+    /* background-image: url(/assets/pointing.png); */
+    
     box-shadow: 0rem 1.5625rem 3.125rem rgba(255, 233, 240, 0.25);
   }
 
   .card:hover {
     background-color: rgba(255, 255, 255, 0.5);
+    color: var(--raisin);
   }
 
   /* *** */
@@ -396,13 +407,16 @@ footer {
   .card-hover:hover {
     background-size: cover;
     background-position: right;
-    background-image: url(./assets/card-photo-tablet.png);
+    /* background-image: url(/assets/pointing2.png); */
+    background: linear-gradient(180deg, #14213dae 0%, #fca21189 100%);
+    color: var(--raisin);
   }
 
   .card-hover:hover~.card {
     transform: scale(1);
-    filter: hue-rotate(-60deg);
+    filter: hue-rotate(-155deg);
     transition: all ease-in-out 0.5s;
+
   }
 }
 
@@ -495,7 +509,7 @@ footer {
   }
 
   .card-hover:hover {
-    background: linear-gradient(180deg, #FF6F48 0.04%, #F02AA6 100%);
+    background: linear-gradient(180deg, #14213dae 0%, #fca21189 100%);
   }
 
   .card-hover:hover~.card {
